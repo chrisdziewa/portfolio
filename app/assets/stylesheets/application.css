@@ -11,5 +11,563 @@
  * file per style scope.
  *
  *= require_tree .
+ *= require_normalize
+ *= require_flexslider
  *= require_self
  */
+
+
+ /*  General layout ======= 
+
+====================*/
+
+html, body {
+	width: 100%;
+	height: 100%;
+	margin: 0;
+	font-family: 'Kameron', serif;
+	letter-spacing: 1px;
+}
+
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	height: 100%;
+}
+
+section {
+	min-height: 300px;
+	overflow: hidden;
+}
+
+h1, 
+#hero h2,
+nav a { 
+	font-family: 'Poiret One', cursive;
+	letter-spacing: 1px;
+}
+
+/*  Header ======= 
+
+====================*/
+
+header {
+	height: 110px;
+	background: hsla(199, 65%, 30%, 1) url('../img/diamond-pattern.png') 180% 0% ;
+	padding-top: 10px;
+}
+
+header h1 {
+	color: white;
+	margin-bottom: 0;
+	width: 70%;
+	white-space: nowrap;
+	max-width: 250px;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+}
+
+
+header h4 {
+	color: hsla(200, 50%, 80%, 1);
+	margin-top: 5px;
+
+}
+
+header h1,
+header h4 {
+	text-align: center;
+}
+
+.header-scrolled {
+	position: relative;
+}
+
+/*  Navigation */
+
+.nav-scrolled,
+header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+}
+
+.nav-scrolled {
+	transition: box-shadow .3s ease-in-out;
+	box-shadow: 0 2px 3px rgba(0,0,0, .5);
+}
+
+nav {
+	background: hsla(199,22%,23%, 1);
+	width: 100%;
+	padding-top: 15px;
+	margin-bottom: -50px;
+	padding-bottom: 15px;
+	text-align: center;
+	position: relative;
+	z-index: 150;
+}
+
+nav a {
+	color: white;
+	text-decoration: none;
+	display: inline-block;
+	margin-right: 2.5%;
+	margin-left: 2.5%;
+	font-size: 1rem;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+nav a:hover {
+	color: hsla(176, 11%, 64%, 1);
+	transition: color .4s ease;
+}
+
+nav a:active,
+nav a:visited {
+	outline: none;
+}
+
+
+/* Hero section ==============
+
+=============================*/
+
+#hero {
+	background: hsla(176, 11%, 64%, 1);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	height: 540px;
+	position: relative;
+}
+
+#hero h2 {
+	text-align: center;
+	margin-top: 130px;
+	font-size: 1.4rem;
+	color: hsla(199,22%,23%, 1);
+	line-height: 1.5;
+	word-spacing: -3px;
+}
+
+.scroll-arrow {
+	position: relative;
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	top: 35%;
+	width: 60px;
+	-webkit-animation: arrow-bounce 4s infinite linear;
+	-moz-animation: arrow-bounce 4s infinite linear;		
+	-ms-animation: arrow-bounce 4s infinite linear;	
+	animation: arrow-bounce 4s infinite linear;
+
+
+}
+
+.arrow-to-top {
+	width: 40px;
+	height: 40px;
+	border-radius: 50%;
+	background: rgba(200,200,200,.4);
+	position: fixed;
+	bottom: 80px;
+	right: 20px;
+	z-index: 200;
+}
+
+.arrow-to-top:hover {
+	background: rgba(200,200,200, .6);
+	transition: background .8s ease;
+}
+
+.arrow-to-top:hover::after {
+	color: hsla(199,22%,23%, 1);
+	transition: color .8s ease;
+}
+
+
+.arrow-to-top:after {
+	content: '\25B2';
+	color: hsla(176, 11%, 64%, 1);
+	position: absolute;
+	right: 7px;
+	top: 5px;
+	font-size: 1.5rem;
+	z-index: 250;
+	display: block;
+}
+
+/* Shared section ==============
+
+==============================*/
+
+section h1::after,
+section h1::before {
+	bottom: 20px;
+	content: "_________________________________________";
+	color: inherit;
+	position: absolute;
+	font-size: 3rem;
+	font-family: sans-serif;
+	letter-spacing: 0;
+}
+
+section h1::before {
+	left: -1095px;
+}
+
+section h1::after {
+	right: -1097px;
+}
+
+#about h1,
+#work h1, 
+#contact h1 {
+	text-align: center;
+	padding: 10px;
+	width: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	position: relative;
+	max-width: 250px;
+}
+
+#about,
+#work, 
+#contact {
+	min-height: 600px;
+}
+
+
+/* About section ==============
+
+==============================*/
+
+#about {
+	background: hsla(199,22%,23%, 1);
+	padding: 20px 0 60px 0; 
+}
+
+#about h1 {
+	color: hsla(176, 11%, 64%, 1);
+	border: 3px solid hsla(176, 11%, 64%, 1);
+}
+
+#about p {
+	color: white;
+	width: 90%;
+	margin: 0 auto 0 auto;
+}
+
+.about-photo-contain {
+	margin-top: 60px;
+	margin-bottom: 50px;
+}
+
+.about-photo {
+	width: 150px;
+	height: 150px;
+	border: 4px solid hsla(200, 50%, 80%, 1);
+	border-radius: 50%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+.about-photo img {
+	width: 100%;
+}
+
+/* Work section ==============
+
+==============================*/
+
+#work {
+	padding: 20px 0; 
+}
+
+#work h1 {
+	color: hsla(199,22%,23%, 1);
+	border: 3px solid hsla(199,22%,23%, 1);
+}
+
+.flexslider {
+	margin-top: 100px;
+	margin-bottom: 150px;
+	padding-top: 20px;
+	padding-bottom: 20px;
+	box-shadow: none;
+}
+
+.slides .content { 
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.flexslider .slides img {
+	width: 70%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.slides h2 {
+	font-size: 1.2rem;
+	margin-top: 30px;
+}
+
+.slides p {
+	width: 90%;
+	margin: 30px auto 50px auto;
+	text-align: left;
+}
+
+.slides .site-button {
+	margin-top: 20px;
+	text-decoration: none;
+	padding: 15px 30px;
+	border-radius: 25px;
+	color: white;
+	background: hsla(199,22%,23%, 1);
+}
+
+/* Contact section ==============
+
+==============================*/
+
+#contact {
+	background: hsla(199, 65%, 30%, 1);
+	padding: 20px 0;
+}
+
+#contact h1 {
+	color: white;
+	border: 3px solid white;
+}
+
+form {
+	width: 90%;
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+}
+
+input, textarea {
+    width: 100%;
+    display: block;
+}
+
+textarea {
+	height: 100px;
+}
+
+label {
+	display: block;
+	color: white;
+}
+
+input[type="submit"] {	
+	color: white;
+	background: hsla(199,22%,23%, 1);
+	width: 30%;
+	text-align: center;
+	margin-top: 5px;
+	height: 40px;
+	border: none;
+	border-radius: 25px;
+	font-size: 1.3rem;
+}
+
+input[type="submit"]:hover {
+	background: hsla(176, 11%, 64%, 1);
+	transition: all .5s ease;
+	color: hsla(199,22%,23%, 1);
+}
+
+/* Footer ==============
+
+==============================*/
+
+footer {
+	background: hsla(199,22%,23%, 1);	
+	padding: 10px 0;
+}
+
+footer p {
+	color: hsla(176, 11%, 64%, 1);
+	text-align: center;
+}
+
+
+/* Animations ==============
+
+==============================*/
+
+
+@-moz-keyframes arrow-bounce {
+	0% { transform: translateY(0) }
+	10% { transform: translateY(5px) }
+	20% { transform: translateY(-5px) }
+	23% { transform: translateY(30px) }
+	32%,
+	40% { transform: translateY(0) }
+	42% { transform: translateY(-3px) }
+	47%,
+	50% { transform: translateY(3px) }
+	56% { transform: translateY(0) }
+	100% { transform: translateY(0) }
+}
+
+@-webkit-keyframes arrow-bounce {
+	0% { -webkit-transform: translateY(0) }
+	10% { -webkit-transform: translateY(5px) }
+	20% { -webkit-transform: translateY(-5px) }
+	23% { -webkit-transform: translateY(30px) }
+	32%,
+	40% { -webkit-transform: translateY(0) }
+	42% { -webkit-transform: translateY(-3px) }
+	47%,
+	50% { -webkit-transform: translateY(3px) }
+	56% { -webkit-transform: translateY(0) }
+	100% { -webkit-transform: translateY(0) }
+}
+@-ms-keyframes arrow-bounce {
+	0% { -ms-transform: translateY(0) }
+	10% { -ms-transform: translateY(5px) }
+	20% { -ms-transform: translateY(-5px) }
+	23% { -ms-transform: translateY(30px) }
+	32%,
+	40% { -ms-transform: translateY(0) }
+	42% { -ms-transform: translateY(-3px) }
+	47%,
+	50% { -ms-transform: translateY(3px) }
+	56% { -ms-transform: translateY(0) }
+	100% { -ms-transform: translateY(0) }
+}
+@keyframes arrow-bounce {
+	0% { transform: translateY(0) }
+	10% { transform: translateY(5px) }
+	20% { transform: translateY(-5px) }
+	23% { transform: translateY(30px) }
+	32%,
+	40% { transform: translateY(0) }
+	42% { transform: translateY(-3px) }
+	47%,
+	50% { transform: translateY(3px) }
+	56% { transform: translateY(0) }
+	100% { transform: translateY(0) }
+}
+
+
+/* Media Queries ==============
+
+==============================*/
+
+
+
+/*===== Medium screen sizes======*/
+
+@media only screen and (min-width: 500px) {
+
+	/* Navigation */ 
+
+	nav a {
+		margin-left: 5%; 
+		margin-right: 5%;
+		font-size: 1.2rem;
+	}
+
+	/* hero */
+	#hero h2 {
+		font-size: 2rem;
+	}
+	.scroll-arrow {
+		top: 28%;
+	}
+
+	/* About Section */
+
+	#about p {
+		width: 85%;
+	}
+
+	/* Contact Section */
+
+	form {
+		width: 65%;
+	}
+}
+
+
+@media only screen and (min-width: 768px) {
+	.container {
+		max-width: 1000px;
+	}
+
+	/* Navigation */
+
+	nav a {
+		margin-left: 7%;
+		margin-right: 7%;
+		font-size: 1.3rem;
+	}
+
+	.arrow-to-top {
+		height: 60px;
+		width: 60px;
+		bottom: 10px;
+		right: 30px;
+	}
+
+	.arrow-to-top:after {
+		font-size: 2rem;
+		right: 12px;
+		top: 8px;
+	}
+
+ 	/* About Section */
+ 	#about p:first-of-type {
+ 		margin-top: 100px;
+ 	}
+
+ 	#about p {
+ 		float: left;
+ 		width: 56%;
+ 		clear: left;
+ 		margin-left: 4%;
+ 		margin-top: 20px;
+ 	}
+
+ 	.about-photo-contain {
+ 		width: 40%;
+ 		float: right;
+ 		margin-top: 0;
+	margin-bottom: 0;
+ 	}
+
+ 	.about-photo {
+ 		text-align: center;
+ 		width: 200px;
+ 		height: 200px;
+ 		margin-top: 80px;
+ 	}
+
+ 	/* Contact Section */
+
+ 	form {
+ 		float: left;
+ 		width: 50%;
+ 		margin-left: 5%;
+ 	}
+
+}
+
+
+
+
