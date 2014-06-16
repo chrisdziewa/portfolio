@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Chris Dziewa | Developer</title>
+
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/flexslider.css">
+	<link href='http://fonts.googleapis.com/css?family=Poiret+One' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Kameron' rel='stylesheet' type='text/css'>
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body>
+	<header id="top" class="header-scrolled">
+		<div class="container">
+			<h1>Chris Dziewa</h1>
+			<h4>Web Developer</h4>
+		</div>
+	</header>
+
+	<nav>
+		<div class="container"><a  href="#about">About</a>
+			<a  href="#work">Work</a>
+			<a>Blog</a>
+			<a  href="#contact">Contact</a>
+		</div>
+	</nav>
+
+	<section id="hero">
+		<div class="container">
+			<h2>Simple, Elegant designs<br>for your brand</h2>
+		
+			<img class="scroll-arrow" src="img/arrow.png" alt="arrow made of bubbles">
+		</div>
+	</section>
+
+	<section id="about">
+		<div class="container">
+			<h1>About</h1>
+
+				<div class="about-photo-contain">
+					<figure class="about-photo">
+						<img src="img/chris.jpg" alt="photo of Chris Dziewa">
+					</figure>
+				</div>
+
+				<p> consectetur adipiscing elit. Morbi purus nisl, tempus at augue non, pretium rutrum tellus. Vivamus fermentum tellus in malesuada fermentum. Suspendisse potenti. Maecenas id quam nisl. Aenean eget arcu faucibus, placerat velit eget, condimentum lectus.</p> 
+				<br>
+				<p>
+				Cras elementum, mi a posuere placerat, dui neque auctor arcu, vel vulputate massa nibh ut nisl. Suspendisse pellentesque mollis nulla, a varius nisi tempor eu. In pulvinar sed sapien vehicula mattis. Phasellus libero.
+				</p>
+		
+				<a href="#" class="arrow-to-top"> </a>
+			</div>
+	</section>
+
+	<section id="work">
+		<div class="container">
+			<h1>Work</h1>
+
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<div class="content">
+							
+							<img src="img/stafford-site.jpg" alt="screenshot of stafford-photo.com">
+							
+							<h2>www.stafford-photo.com</h2>
+							
+							<p>Photography portfolio site for photographer Alex Stafford. Alex is a local Milwaukee-area photographer specializing in portrait, engagement and wedding photography.This site was designed and handcoded as a fully-editable custom WordPress theme. </p>
+	
+							<a class="site-button" href="http://www.stafford-photo.com">Go to site</a>
+						</div>
+					</li>
+	
+	
+					<li>
+						<div class="content">
+							
+							<img src="img/lcp-site.jpg" alt="screenshot of lakecountryplumbing.com">
+							
+							<h2>www.lakecountryplumbing.com</h2>
+							
+							<p>Plumbing business site for Brian Hohnke of Lake Country Plumbing Co. Lake Country Plumbing Co. is a family-run business offering plumbing, maintenance and remodeling services in Southeastern Wisconsin. Site was developed using handcoded PHP.</p>
+	
+							<a class="site-button" href="http://www.lakecountryplumbing.com">Go to site</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+
+	<section id="contact">
+		<div class="container">
+			<h1>Contact</h1>
+		
+			<form novalidate>
+				<label for="name">Name</label> <br>
+				<input id="name"><br>
+	
+				<label for="email">Email</label><br>
+				<input type="email" id="email"><br>
+	
+				<label for="message">Message</label><br>
+				<textarea id="message"></textarea><br>
+	
+				<input type="submit" value="Send">
+			</form>
+		</div>
+	</section>
+
+	<footer>
+		<div class="container">
+			
+			<p>&copy;2014 Chris Dziewa</p>
+		
+		</div>	
+		
+	</footer>
+
+	 <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+	 <script src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.10.4/jquery-ui.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript" charset="utf-8">
+		$(window).load(function() {
+		$('.flexslider').flexslider();
+		});
+	</script>
+</body>
+</html>
