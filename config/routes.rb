@@ -1,6 +1,8 @@
 Rails.application.routes.draw do
   root "homepage#show"
 
+  get "/blog", to: "blog#index", as: 'blog'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
