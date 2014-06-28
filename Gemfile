@@ -30,6 +30,7 @@ group :development do
 end
 
 group :test, :development do 
+	gem 'shoulda-matchers', require: false
 	gem 'rspec-rails'
 end
 
