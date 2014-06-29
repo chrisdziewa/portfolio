@@ -351,28 +351,29 @@ section h1::after {
 	border: 3px solid white;
 }
 
-form {
+#contact form {
 	width: 90%;
 	margin-left: auto;
 	margin-right: auto;
 	overflow: hidden;
 }
 
-input, textarea {
+#contact input,
+#contact textarea {
     width: 100%;
     display: block;
 }
 
-textarea {
+#contact textarea {
 	height: 100px;
 }
 
-label {
+#contact label {
 	display: block;
 	color: white;
 }
 
-input[type="submit"] {	
+#contact input[type="submit"] {	
 	color: white;
 	background: hsla(199,22%,23%, 1);
 	width: 30%;
@@ -385,9 +386,17 @@ input[type="submit"] {
 	transition: all .5s ease;
 }
 
-input[type="submit"]:hover {
+#contact input[type="submit"]:hover {
 	background: hsla(176, 11%, 64%, 1);
 	color: hsla(199,22%,23%, 1);
+}
+
+/* Blog Page ==============
+	
+==============================*/
+
+.new-blog-form {
+	color: black;
 }
 
 /* Footer ==============
