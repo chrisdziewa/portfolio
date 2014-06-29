@@ -227,7 +227,8 @@ section h1::after {
 
 #about h1,
 #work h1, 
-#contact h1 {
+#contact h1,
+#blog-section h1 {
 	text-align: center;
 	padding: 10px;
 	width: 50%;
@@ -239,7 +240,8 @@ section h1::after {
 
 #about,
 #work, 
-#contact {
+#contact,
+#blog-section {
 	min-height: 600px;
 }
 
@@ -289,6 +291,7 @@ section h1::after {
 
 #work {
 	padding: 20px 0; 
+	background: white;
 }
 
 #work h1 {
