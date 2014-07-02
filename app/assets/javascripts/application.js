@@ -11,10 +11,11 @@
 // about supported directives.
 //
 //= require jquery
+//= require jquery.turbolinks
 //= require jquery_ujs
-//= require turbolinks
-//= require jquery.flexslider-min.js
-//= require_tree .
 //= require main.js
+//= require jquery.flexslider-min.js
+//= require turbolinks
+//= require_tree .
 
 

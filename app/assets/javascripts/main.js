@@ -9,7 +9,7 @@ $(document).ready(function() {
 
 	upArrow.hide();
 
-	$(window).scroll(function() {
+	$(document).scroll(function() {
 		var distanceFromTop = $(this).scrollTop();
 
 		if (distanceFromTop > 120 ) {
@@ -52,7 +52,7 @@ $(document).ready(function() {
     	}
     });
 
-    $(".arrow-to-top").click(function(event) {
+    $("body").on('click', '.arrow-to-top', function(event) {
     	event.preventDefault();
     	$('html, body').animate({
 			scrollTop: 0}, 1100);
