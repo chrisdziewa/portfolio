@@ -120,11 +120,11 @@ nav a {
 	font-size: 1rem;
 	padding-top: 3px;
 	padding-bottom: 3px;
+	transition: color .4s ease;
 }
 
 nav a:hover {
 	color: hsla(176, 11%, 64%, 1);
-	transition: color .4s ease;
 }
 
 nav a:active,
@@ -514,6 +514,15 @@ footer p {
 	form {
 		width: 65%;
 	}
+
+	/* Blog Page */
+
+ 	.white-wrapper {
+ 		margin-left: auto;
+ 		margin-right: auto;
+ 		width: 70%;
+ 	}
+
 }
 
 
@@ -580,6 +589,35 @@ footer p {
 
 }
 
+@media only screen and (min-width: 950px) {
+		/* Blog Page */
 
+ 	#blog-section {
+ 		background: hsla(176, 11%, 64%, 1);
+ 		padding: 40px 0;
+ 	}
+
+ 	.white-wrapper {
+ 		width: 60%;
+ 		float: left;
+ 		margin-left: 3%;
+ 	}
+
+ 	aside {
+ 		width: 25%;
+ 		float: right;
+ 		border-radius: 5px;
+		padding: 50px 10px 20px 10px;
+		background: rgba(240, 240,240, 1);
+		margin-left: 2%;
+		margin-right: 3%; 
+		text-align: center;
+ 	}
+
+ 	aside p {
+ 		text-align: left;
+ 		margin-left: 3%;
+ 	}
+}
 
 
