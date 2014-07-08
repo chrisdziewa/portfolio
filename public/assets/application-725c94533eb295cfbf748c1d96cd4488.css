@@ -1,0 +1,1638 @@
+/* line 5, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+body {
+  background: #f0f0f0;
+  color: black;
+}
+
+/* line 10, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+#blog-section h1 {
+  color: black;
+}
+
+/* line 14, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+#blog-section h2 {
+  color: #2e3f48;
+}
+
+/* line 18, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+.white-wrapper hr {
+  background: #2e3f48;
+  opacity: .2;
+}
+
+/* line 23, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+#blog-section {
+  padding: 0px;
+  margin-top: 50px;
+}
+
+/* line 28, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+article {
+  padding: 40px 0;
+}
+
+/* line 32, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+.white-wrapper {
+  background: #f0f0f0;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 5px;
+  padding: 10px 20px 20px 20px;
+}
+
+/* line 41, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+p.date {
+  color: rgba(46, 63, 72, 0.5);
+}
+
+/* line 44, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+.home-link {
+  position: relative;
+}
+
+/* line 48, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+.home-link:before {
+  content: "\2190";
+  position: absolute;
+  color: white;
+  font-family: "Poiret One",cursive;
+  left: -30px;
+  transition: color .4s ease;
+}
+
+/* line 57, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+.home-link:hover:before {
+  color: #99adac;
+}
+
+/* line 61, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/blogposts.css.scss */
+figure.blog-photo img {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  border: 4px solid #B3D4E6;
+}
+/*
+ * jQuery FlexSlider v2.2.0
+ * http://www.woothemes.com/flexslider/
+ *
+ * Copyright 2012 WooThemes
+ * Free to use under the GPLv2 license.
+ * http://www.gnu.org/licenses/gpl-2.0.html
+ *
+ * Contributing author: Tyler Smith (@mbmufffin)
+ */
+/* Browser Resets
+*********************************/
+/* line 19, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-container a:active,
+.flexslider a:active,
+.flex-container a:focus,
+.flexslider a:focus {
+  outline: none;
+}
+
+/* line 22, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.slides,
+.flex-control-nav,
+.flex-direction-nav {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  text-align: center;
+}
+
+/* Icon Fonts
+*********************************/
+/* Font-face Icons */
+@font-face {
+  font-family: 'flexslider-icon';
+  src: "/assets/flexslider-icon.eot";
+  src: "/assets/flexslider-icon.eot?#iefix" format("embedded-opentype"), "/assets/flexslider-icon.woff" format("woff"), "/assets/flexslider-icon.ttf" format("truetype"), "/assets/flexslider-icon.svg#flexslider-icon" format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* FlexSlider Necessary Styles
+*********************************/
+/* line 40, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider {
+  margin: 0;
+  padding: 0;
+}
+
+/* line 41, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider .slides > li {
+  display: none;
+  -webkit-backface-visibility: hidden;
+}
+
+/* Hide the slides before the JS is loaded. Avoids image jumping */
+/* line 42, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider .slides img {
+  width: 100%;
+  display: block;
+}
+
+/* line 43, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-pauseplay span {
+  text-transform: capitalize;
+}
+
+/* Clearfix for the .slides element */
+/* line 46, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.slides:after {
+  content: "\0020";
+  display: block;
+  clear: both;
+  visibility: hidden;
+  line-height: 0;
+  height: 0;
+}
+
+/* line 47, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+html[xmlns] .slides {
+  display: block;
+}
+
+/* line 48, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+* html .slides {
+  height: 1%;
+}
+
+/* No JavaScript Fallback */
+/* If you are not using another script, such as Modernizr, make sure you
+ * include js that eliminates this class on page load */
+/* line 53, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.no-js .slides > li:first-child {
+  display: block;
+}
+
+/* FlexSlider Default Theme
+*********************************/
+/* line 57, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider {
+  margin: 0 0 60px;
+  background: #fff;
+  border: 4px solid #fff;
+  position: relative;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  -o-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  -o-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.2);
+  zoom: 1;
+}
+
+/* line 58, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-viewport {
+  max-height: 2000px;
+  -webkit-transition: all 1s ease;
+  -moz-transition: all 1s ease;
+  -o-transition: all 1s ease;
+  transition: all 1s ease;
+}
+
+/* line 59, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.loading .flex-viewport {
+  max-height: 300px;
+}
+
+/* line 60, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider .slides {
+  zoom: 1;
+}
+
+/* line 61, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.carousel li {
+  margin-right: 5px;
+}
+
+/* Direction Nav */
+/* line 64, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-direction-nav {
+  *height: 0;
+}
+
+/* line 65, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-direction-nav a {
+  text-decoration: none;
+  display: block;
+  width: 40px;
+  height: 40px;
+  margin: -20px 0 0;
+  position: absolute;
+  top: 50%;
+  z-index: 10;
+  overflow: hidden;
+  opacity: 0;
+  cursor: pointer;
+  color: rgba(0, 0, 0, 0.8);
+  text-shadow: 1px 1px 0 rgba(255, 255, 255, 0.3);
+  -webkit-transition: all .3s ease;
+  -moz-transition: all .3s ease;
+  transition: all .3s ease;
+}
+
+/* line 66, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-direction-nav .flex-prev {
+  left: -50px;
+}
+
+/* line 67, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-direction-nav .flex-next {
+  right: -50px;
+  text-align: right;
+}
+
+/* line 68, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider:hover .flex-prev {
+  opacity: 0.7;
+  left: 10px;
+}
+
+/* line 69, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider:hover .flex-next {
+  opacity: 0.7;
+  right: 10px;
+}
+
+/* line 70, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flexslider:hover .flex-next:hover, .flexslider:hover .flex-prev:hover {
+  opacity: 1;
+}
+
+/* line 71, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-direction-nav .flex-disabled {
+  opacity: 0 !important;
+  filter: alpha(opacity=0);
+  cursor: default;
+}
+
+/* line 72, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-direction-nav a:before {
+  font-family: "flexslider-icon";
+  font-size: 40px;
+  display: inline-block;
+  content: '\f001';
+}
+
+/* line 73, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-direction-nav a.flex-next:before {
+  content: '\f002';
+}
+
+/* Pause/Play */
+/* line 76, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-pauseplay a {
+  display: block;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  bottom: 5px;
+  left: 10px;
+  opacity: 0.8;
+  z-index: 10;
+  overflow: hidden;
+  cursor: pointer;
+  color: #000;
+}
+
+/* line 77, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-pauseplay a:before {
+  font-family: "flexslider-icon";
+  font-size: 20px;
+  display: inline-block;
+  content: '\f004';
+}
+
+/* line 78, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-pauseplay a:hover {
+  opacity: 1;
+}
+
+/* line 79, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-pauseplay a.flex-play:before {
+  content: '\f003';
+}
+
+/* Control Nav */
+/* line 82, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-nav {
+  width: 100%;
+  position: absolute;
+  bottom: -40px;
+  text-align: center;
+}
+
+/* line 83, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-nav li {
+  margin: 0 6px;
+  display: inline-block;
+  zoom: 1;
+  *display: inline;
+}
+
+/* line 84, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-paging li a {
+  width: 11px;
+  height: 11px;
+  display: block;
+  background: #666;
+  background: rgba(0, 0, 0, 0.5);
+  cursor: pointer;
+  text-indent: -9999px;
+  -webkit-border-radius: 20px;
+  -moz-border-radius: 20px;
+  -o-border-radius: 20px;
+  border-radius: 20px;
+  -webkit-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.3);
+}
+
+/* line 85, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-paging li a:hover {
+  background: #333;
+  background: rgba(0, 0, 0, 0.7);
+}
+
+/* line 86, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-paging li a.flex-active {
+  background: #000;
+  background: rgba(0, 0, 0, 0.9);
+  cursor: default;
+}
+
+/* line 88, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-thumbs {
+  margin: 5px 0 0;
+  position: static;
+  overflow: hidden;
+}
+
+/* line 89, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-thumbs li {
+  width: 25%;
+  float: left;
+  margin: 0;
+}
+
+/* line 90, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-thumbs img {
+  width: 100%;
+  display: block;
+  opacity: .7;
+  cursor: pointer;
+}
+
+/* line 91, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-thumbs img:hover {
+  opacity: 1;
+}
+
+/* line 92, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+.flex-control-thumbs .flex-active {
+  opacity: 1;
+  cursor: default;
+}
+
+@media screen and (max-width: 860px) {
+  /* line 95, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+  .flex-direction-nav .flex-prev {
+    opacity: 1;
+    left: 10px;
+  }
+
+  /* line 96, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/flexslider.css.scss */
+  .flex-direction-nav .flex-next {
+    opacity: 1;
+    right: 10px;
+  }
+}
+/*! normalize.css v3.0.1 | MIT License | git.io/normalize */
+
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+
+
+html {
+  font-family: sans-serif; /* 1 */
+  -ms-text-size-adjust: 100%; /* 2 */
+  -webkit-text-size-adjust: 100%; /* 2 */
+}
+
+/**
+ * Remove default margin.
+ */
+
+body {
+  margin: 0;
+}
+
+/* HTML5 display definitions
+   ========================================================================== */
+
+/**
+ * Correct `block` display not defined for any HTML5 element in IE 8/9.
+ * Correct `block` display not defined for `details` or `summary` in IE 10/11 and Firefox.
+ * Correct `block` display not defined for `main` in IE 11.
+ */
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+
+/**
+ * 1. Correct `inline-block` display not defined in IE 8/9.
+ * 2. Normalize vertical alignment of `progress` in Chrome, Firefox, and Opera.
+ */
+
+audio,
+canvas,
+progress,
+video {
+  display: inline-block; /* 1 */
+  vertical-align: baseline; /* 2 */
+}
+
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+
+/**
+ * Address `[hidden]` styling not present in IE 8/9/10.
+ * Hide the `template` element in IE 8/9/11, Safari, and Firefox < 22.
+ */
+
+[hidden],
+template {
+  display: none;
+}
+
+/* Links
+   ========================================================================== */
+
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+
+a {
+  background: transparent;
+}
+
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+
+a:active,
+a:hover {
+  outline: 0;
+}
+
+/* Text-level semantics
+   ========================================================================== */
+
+/**
+ * Address styling not present in IE 8/9/10/11, Safari, and Chrome.
+ */
+
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari, and Chrome.
+ */
+
+b,
+strong {
+  font-weight: bold;
+}
+
+/**
+ * Address styling not present in Safari and Chrome.
+ */
+
+dfn {
+  font-style: italic;
+}
+
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari, and Chrome.
+ */
+
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0;
+}
+
+/**
+ * Address styling not present in IE 8/9.
+ */
+
+mark {
+  background: #ff0;
+  color: #000;
+}
+
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+
+small {
+  font-size: 80%;
+}
+
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sup {
+  top: -0.5em;
+}
+
+sub {
+  bottom: -0.25em;
+}
+
+/* Embedded content
+   ========================================================================== */
+
+/**
+ * Remove border when inside `a` element in IE 8/9/10.
+ */
+
+img {
+  border: 0;
+}
+
+/**
+ * Correct overflow not hidden in IE 9/10/11.
+ */
+
+svg:not(:root) {
+  overflow: hidden;
+}
+
+/* Grouping content
+   ========================================================================== */
+
+/**
+ * Address margin not present in IE 8/9 and Safari.
+ */
+
+figure {
+  margin: 1em 40px;
+}
+
+/**
+ * Address differences between Firefox and other browsers.
+ */
+
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+
+/**
+ * Contain overflow in all browsers.
+ */
+
+pre {
+  overflow: auto;
+}
+
+/**
+ * Address odd `em`-unit font size rendering in all browsers.
+ */
+
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+/* Forms
+   ========================================================================== */
+
+/**
+ * Known limitation: by default, Chrome and Safari on OS X allow very limited
+ * styling of `select`, unless a `border` property is set.
+ */
+
+/**
+ * 1. Correct color not being inherited.
+ *    Known issue: affects color of disabled elements.
+ * 2. Correct font properties not being inherited.
+ * 3. Address margins set differently in Firefox 4+, Safari, and Chrome.
+ */
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  color: inherit; /* 1 */
+  font: inherit; /* 2 */
+  margin: 0; /* 3 */
+}
+
+/**
+ * Address `overflow` set to `hidden` in IE 8/9/10/11.
+ */
+
+button {
+  overflow: visible;
+}
+
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Firefox, IE 8/9/10/11, and Opera.
+ * Correct `select` style inheritance in Firefox.
+ */
+
+button,
+select {
+  text-transform: none;
+}
+
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+
+button,
+html input[type="button"], /* 1 */
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button; /* 2 */
+  cursor: pointer; /* 3 */
+}
+
+/**
+ * Re-set default cursor for disabled elements.
+ */
+
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+
+input {
+  line-height: normal;
+}
+
+/**
+ * It's recommended that you don't attempt to style these elements.
+ * Firefox's implementation doesn't respect box-sizing, padding, or width.
+ *
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Fix the cursor style for Chrome's increment/decrement buttons. For certain
+ * `font-size` values of the `input`, it causes the cursor style of the
+ * decrement button to change from `default` to `text`.
+ */
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari and Chrome
+ *    (include `-moz` to future-proof).
+ */
+
+input[type="search"] {
+  -webkit-appearance: textfield; /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box; /* 2 */
+  box-sizing: content-box;
+}
+
+/**
+ * Remove inner padding and search cancel button in Safari and Chrome on OS X.
+ * Safari (but not Chrome) clips the cancel button when the search input has
+ * padding (and `textfield` appearance).
+ */
+
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+/**
+ * Define consistent border, margin, and padding.
+ */
+
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+
+/**
+ * 1. Correct `color` not being inherited in IE 8/9/10/11.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+
+legend {
+  border: 0; /* 1 */
+  padding: 0; /* 2 */
+}
+
+/**
+ * Remove default vertical scrollbar in IE 8/9/10/11.
+ */
+
+textarea {
+  overflow: auto;
+}
+
+/**
+ * Don't inherit the `font-weight` (applied by a rule above).
+ * NOTE: the default cannot safely be changed in Chrome and Safari on OS X.
+ */
+
+optgroup {
+  font-weight: bold;
+}
+
+/* Tables
+   ========================================================================== */
+
+/**
+ * Remove most spacing between table cells.
+ */
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+td,
+th {
+  padding: 0;
+}
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any styles
+ * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
+ * file per style scope.
+ *
+
+ *= require_normalize
+ *= require_flexslider
+
+ */
+ /*  General layout ======= 
+
+====================*/
+/* line 25, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+html, body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  font-family: 'Kameron', serif;
+  letter-spacing: 1px;
+}
+
+/* line 33, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  height: 100%;
+}
+
+/* line 40, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+section {
+  min-height: 300px;
+  overflow: hidden;
+}
+
+/* line 47, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+h1,
+#hero h2,
+nav a {
+  font-family: 'Poiret One', cursive;
+  letter-spacing: 1px;
+}
+
+/*  Header ======= 
+
+====================*/
+/* line 56, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+header {
+  height: 110px;
+  background: #1b5f7e "/assets/diamond-pattern.png" 180% 0%;
+  padding-top: 10px;
+}
+
+/* line 62, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+header h1 {
+  color: white;
+  margin-bottom: 0;
+  width: 70%;
+  white-space: nowrap;
+  max-width: 250px;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+}
+
+/* line 74, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+header h4 {
+  color: #b3d4e6;
+  margin-top: 5px;
+}
+
+/* line 81, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+header h1,
+header h4 {
+  text-align: center;
+}
+
+/* line 85, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.header-scrolled {
+  position: relative;
+}
+
+/*  Navigation */
+/* line 92, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.nav-scrolled,
+header {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* line 99, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.nav-scrolled {
+  transition: box-shadow .3s ease-in-out;
+  box-shadow: 0 2px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* line 104, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+nav {
+  background: #2e3f48;
+  width: 100%;
+  padding-top: 15px;
+  margin-bottom: -50px;
+  padding-bottom: 15px;
+  text-align: center;
+  position: relative;
+  z-index: 150;
+}
+
+/* line 115, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+nav a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  margin-right: 2.5%;
+  margin-left: 2.5%;
+  font-size: 1rem;
+  padding-top: 3px;
+  padding-bottom: 3px;
+  transition: color .4s ease;
+}
+
+/* line 127, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+nav a:hover {
+  color: #99adac;
+}
+
+/* line 132, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+nav a:active,
+nav a:visited {
+  outline: none;
+}
+
+/* Hero section ==============
+
+=============================*/
+/* line 141, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#hero {
+  background: #99adac;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  height: 540px;
+  position: relative;
+}
+
+/* line 149, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#hero h2 {
+  text-align: center;
+  margin-top: 130px;
+  font-size: 1.4rem;
+  color: #2e3f48;
+  line-height: 1.5;
+  word-spacing: -3px;
+}
+
+/* line 158, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.scroll-arrow {
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+  top: 35%;
+  width: 60px;
+  -webkit-animation: arrow-bounce 4s infinite linear;
+  -moz-animation: arrow-bounce 4s infinite linear;
+  -ms-animation: arrow-bounce 4s infinite linear;
+  animation: arrow-bounce 4s infinite linear;
+}
+
+/* line 173, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.arrow-to-top {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(200, 200, 200, 0.4);
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 200;
+}
+
+/* line 184, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.arrow-to-top:hover {
+  background: rgba(200, 200, 200, 0.6);
+  transition: background .8s ease;
+}
+
+/* line 189, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.arrow-to-top:hover::after {
+  color: #2e3f48;
+  transition: color .8s ease;
+}
+
+/* line 195, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.arrow-to-top:after {
+  content: '\25B2';
+  color: #99adac;
+  position: absolute;
+  right: 7px;
+  top: 5px;
+  font-size: 1.5rem;
+  z-index: 250;
+  display: block;
+}
+
+/* Shared section ==============
+
+==============================*/
+/* line 211, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+section h1::after,
+section h1::before {
+  bottom: 20px;
+  content: "_________________________________________";
+  color: inherit;
+  position: absolute;
+  font-size: 3rem;
+  font-family: sans-serif;
+  letter-spacing: 0;
+}
+
+/* line 221, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+section h1::before {
+  left: -1095px;
+}
+
+/* line 225, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+section h1::after {
+  right: -1097px;
+}
+
+/* line 232, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#about h1,
+#work h1,
+#contact h1,
+#blog-section h1 {
+  text-align: center;
+  padding: 10px;
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  position: relative;
+  max-width: 250px;
+}
+
+/* line 245, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#about,
+#work,
+#contact,
+#blog-section {
+  min-height: 600px;
+}
+
+/* About section ==============
+
+==============================*/
+/* line 254, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#about {
+  background: #2e3f48;
+  padding: 20px 0 60px 0;
+}
+
+/* line 259, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#about h1 {
+  color: #99adac;
+  border: 3px solid #99adac;
+}
+
+/* line 264, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#about p {
+  color: white;
+  width: 90%;
+  margin: 0 auto 0 auto;
+}
+
+/* line 270, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.about-photo-contain {
+  margin-top: 60px;
+  margin-bottom: 50px;
+}
+
+/* line 275, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.about-photo {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #b3d4e6;
+  border-radius: 50%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+/* line 285, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.about-photo img {
+  width: 100%;
+}
+
+/* Work section ==============
+
+==============================*/
+/* line 293, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#work {
+  padding: 20px 0;
+  background: white;
+}
+
+/* line 298, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#work h1 {
+  color: #2e3f48;
+  border: 3px solid #2e3f48;
+}
+
+/* line 303, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.flexslider {
+  margin-top: 100px;
+  margin-bottom: 150px;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  box-shadow: none;
+}
+
+/* line 311, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.slides .content {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 317, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.flexslider .slides img {
+  width: 70%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* line 324, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.slides h2 {
+  font-size: 1.2rem;
+  margin-top: 30px;
+}
+
+/* line 329, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.slides p {
+  width: 90%;
+  margin: 30px auto 50px auto;
+  text-align: left;
+}
+
+/* line 335, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.slides .site-button {
+  margin-top: 20px;
+  text-decoration: none;
+  padding: 15px 30px;
+  border-radius: 25px;
+  color: white;
+  background: #2e3f48;
+}
+
+/* Contact section ==============
+
+==============================*/
+/* line 348, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact {
+  background: #1b5f7e;
+  padding: 20px 0;
+}
+
+/* line 353, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact h1 {
+  color: white;
+  border: 3px solid white;
+}
+
+/* line 358, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact form {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  overflow: hidden;
+}
+
+/* line 366, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact input,
+#contact textarea {
+  width: 100%;
+  display: block;
+}
+
+/* line 371, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact textarea {
+  height: 100px;
+}
+
+/* line 375, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact label {
+  display: block;
+  color: white;
+}
+
+/* line 380, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact input[type="submit"] {
+  color: white;
+  background: #2e3f48;
+  width: 30%;
+  text-align: center;
+  margin-top: 5px;
+  height: 40px;
+  border: none;
+  border-radius: 25px;
+  font-size: 1.3rem;
+  transition: all .5s ease;
+}
+
+/* line 393, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+#contact input[type="submit"]:hover {
+  background: #99adac;
+  color: #2e3f48;
+}
+
+/* Blog Page ==============
+	
+==============================*/
+/* line 402, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+.new-blog-form {
+  color: black;
+}
+
+/* Footer ==============
+
+==============================*/
+/* line 410, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+footer {
+  background: #2e3f48;
+  padding: 10px 0;
+}
+
+/* line 415, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+footer p {
+  color: #99adac;
+  text-align: center;
+}
+
+/* Animations ==============
+
+==============================*/
+@-moz-keyframes arrow-bounce {
+  /* line 427, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  0% {
+    transform: translateY(0);
+  }
+
+  /* line 428, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  10% {
+    transform: translateY(5px);
+  }
+
+  /* line 429, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  20% {
+    transform: translateY(-5px);
+  }
+
+  /* line 430, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  23% {
+    transform: translateY(30px);
+  }
+
+  /* line 432, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  32%,
+  40% {
+    transform: translateY(0);
+  }
+
+  /* line 433, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  42% {
+    transform: translateY(0);
+  }
+
+  /* line 435, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  47%,
+  50% {
+    transform: translateY(0);
+  }
+
+  /* line 436, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  56% {
+    transform: translateY(0);
+  }
+
+  /* line 437, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+@-webkit-keyframes arrow-bounce {
+  /* line 441, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  0% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 442, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  10% {
+    -webkit-transform: translateY(5px);
+  }
+
+  /* line 443, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  20% {
+    -webkit-transform: translateY(-5px);
+  }
+
+  /* line 444, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  23% {
+    -webkit-transform: translateY(30px);
+  }
+
+  /* line 446, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  32%,
+  40% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 447, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  42% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 449, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  47%,
+  50% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 450, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  56% {
+    -webkit-transform: translateY(0);
+  }
+
+  /* line 451, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  100% {
+    -webkit-transform: translateY(0);
+  }
+}
+
+@-ms-keyframes arrow-bounce {
+  /* line 454, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  0% {
+    -ms-transform: translateY(0);
+  }
+
+  /* line 455, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  10% {
+    -ms-transform: translateY(5px);
+  }
+
+  /* line 456, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  20% {
+    -ms-transform: translateY(-5px);
+  }
+
+  /* line 457, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  23% {
+    -ms-transform: translateY(30px);
+  }
+
+  /* line 459, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  32%,
+  40% {
+    -ms-transform: translateY(0);
+  }
+
+  /* line 460, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  42% {
+    -ms-transform: translateY(0);
+  }
+
+  /* line 462, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  47%,
+  50% {
+    -ms-transform: translateY(0);
+  }
+
+  /* line 463, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  56% {
+    -ms-transform: translateY(0);
+  }
+
+  /* line 464, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  100% {
+    -ms-transform: translateY(0);
+  }
+}
+
+@keyframes arrow-bounce {
+  /* line 467, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  0% {
+    transform: translateY(0);
+  }
+
+  /* line 468, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  10% {
+    transform: translateY(5px);
+  }
+
+  /* line 469, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  20% {
+    transform: translateY(-5px);
+  }
+
+  /* line 470, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  23% {
+    transform: translateY(30px);
+  }
+
+  /* line 472, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  32%,
+  40% {
+    transform: translateY(0);
+  }
+
+  /* line 473, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  42% {
+    transform: translateY(0);
+  }
+
+  /* line 475, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  47%,
+  50% {
+    transform: translateY(0);
+  }
+
+  /* line 476, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  56% {
+    transform: translateY(0);
+  }
+
+  /* line 477, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* Media Queries ==============
+
+==============================*/
+/*===== Medium screen sizes======*/
+@media only screen and (min-width: 500px) {
+  /* Navigation */
+  /* line 493, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  nav a {
+    margin-left: 5%;
+    margin-right: 5%;
+    font-size: 1.2rem;
+  }
+
+  /* hero */
+  /* line 500, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  #hero h2 {
+    font-size: 2rem;
+  }
+
+  /* line 503, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .scroll-arrow {
+    top: 28%;
+  }
+
+  /* About Section */
+  /* line 509, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  #about p {
+    width: 85%;
+  }
+
+  /* Contact Section */
+  /* line 515, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  form {
+    width: 65%;
+  }
+
+  /* Blog Page */
+  /* line 521, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .white-wrapper {
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+}
+@media only screen and (min-width: 768px) {
+  /* line 531, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .container {
+    max-width: 1000px;
+  }
+
+  /* Navigation */
+  /* line 537, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  nav a {
+    margin-left: 7%;
+    margin-right: 7%;
+    font-size: 1.3rem;
+  }
+
+  /* line 543, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .arrow-to-top {
+    height: 60px;
+    width: 60px;
+    bottom: 10px;
+    right: 30px;
+  }
+
+  /* line 550, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .arrow-to-top:after {
+    font-size: 2rem;
+    right: 12px;
+    top: 8px;
+  }
+
+  /* About Section */
+  /* line 557, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  #about p:first-of-type {
+    margin-top: 100px;
+  }
+
+  /* line 561, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  #about p {
+    float: left;
+    width: 56%;
+    clear: left;
+    margin-left: 4%;
+    margin-top: 20px;
+  }
+
+  /* line 569, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .about-photo-contain {
+    width: 40%;
+    float: right;
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+  /* line 576, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .about-photo {
+    text-align: center;
+    width: 200px;
+    height: 200px;
+    margin-top: 80px;
+  }
+
+  /* Contact Section */
+  /* line 585, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  form {
+    float: left;
+    width: 50%;
+    margin-left: 5%;
+  }
+}
+@media only screen and (min-width: 950px) {
+  /* Blog Page */
+  /* line 596, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  #blog-section {
+    background: #99adac;
+    padding: 40px 0;
+  }
+
+  /* line 601, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  .white-wrapper {
+    width: 60%;
+    float: left;
+    margin-left: 3%;
+  }
+
+  /* line 607, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  aside {
+    width: 25%;
+    float: right;
+    border-radius: 5px;
+    padding: 50px 10px 20px 10px;
+    background: #f0f0f0;
+    margin-left: 2%;
+    margin-right: 3%;
+    text-align: center;
+  }
+
+  /* line 618, /Users/chrisdziewa/My Business/my_site/app/assets/stylesheets/application.css.scss */
+  aside p {
+    text-align: left;
+    margin-left: 3%;
+  }
+}
