@@ -25,11 +25,11 @@
 /* Font-face Icons */
 @font-face {
 	font-family: 'flexslider-icon';
-	src:url('flexslider-icon.eot');
-	src:url('flexslider-icon.eot?#iefix' ) format('embedded-opentype'),
-		url('flexslider-icon.woff') format('woff'),
-		url('flexslider-icon.ttf' ) format('truetype'),
-		url('flexslider-icon.svg#flexslider-icon') format('svg');
+	src:url(image_path('flexslider-icon.eot'));
+	src:url(image_path('flexslider-icon.eot?#iefix') ) format('embedded-opentype'),
+		url(image_path('flexslider-icon.woff')) format('woff'),
+		url(image_path('flexslider-icon.ttf') ) format('truetype'),
+		url(image_path('flexslider-icon.svg#flexslider-icon') ) format('svg');
 	font-weight: normal;
 	font-style: normal;
 }
