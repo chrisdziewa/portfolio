@@ -14,8 +14,29 @@
 					<p class="date">Date: <%= @post.created_at %></p>
 					<p><%= @post.content %></p>
 				</article>
-				<%= link_to "Back to Blog", blog_posts_path %>
 				<hr>
+				<%= link_to "Back to Blog", blog_posts_path %>
+				<div class="comments">
+					<h3>Comments: 
+						<% if @post.comments.count > 0 %>
+							<%= @post.comments.count %>
+						<% else %>
+							<%= "0" %>
+						<% end %>
+					</h3>
+
+					<% @post.comments.all.each do |comment| %>
+						<div class="comment-<%= comment.id %>">
+							<div class="comment-info">
+								<span>
+									<%= "#{comment.first_name} #{comment.last_name}" %>
+								</span>
+							</div>
+							<p><%= comment.content %></p>
+							<hr>
+						</div>
+					<% end %>
+				</div>
 		</div>
 
 		<aside>
