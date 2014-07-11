@@ -1,4 +1,29 @@
-<h3>Title: <%= @post.title %></h3>
-<p>Content: <%= @post.content %></p>
 
-<%= link_to "Back to Blog", blog_posts_path %>
+<%= render 'partials/header' %>
+
+<%= render 'partials/blog_nav' %>
+
+
+
+<section id="blog-section">
+	<div class="container">
+		<div class="white-wrapper">
+				<article class="blog-post-<%= @post.id %>">
+					<h2><%= @post.title.titleize %></h2>
+					<h4>By: <%= @post.author %></h4>
+					<p class="date">Date: <%= @post.created_at %></p>
+					<p><%= @post.content %></p>
+				</article>
+				<%= link_to "Back to Blog", blog_posts_path %>
+				<hr>
+		</div>
+
+		<aside>
+			<h2>About me</h2>
+			<figure class="blog-photo">
+				<%= image_tag("chris.jpg", alt: "Photo of Chris Dziewa") %>
+			</figure>	
+			<p>Hey, I'm Chris Dziewa and welcome to my blog. This is where I write about my journey to teach myself web development.</p>
+		</aside>
+	</div>
+</section>

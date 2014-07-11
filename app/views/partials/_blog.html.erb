@@ -2,8 +2,9 @@
 	<div class="container">
 		<div class="white-wrapper">
 			<% @blogs.all.each do |post| %>
-				<article>
-					<h2><%= post.title.titleize %></h2>
+				<article class="blog-post-<%= post.id %>">
+					<h2><%= link_to post.title.titleize, blog_post_path(post) %></h2>
+					<h4>By: <%= post.author %></h4>
 					<p class="date">Date: <%= post.created_at %></p>
 					<p><%= post.content %></p>
 				</article>

@@ -11,8 +11,15 @@ body {
 	color: black;
 }
 
-#blog-section h2 {
+#blog-section h2 a,
+#blog-section h2 a:active,
+#blog-section h2 a:visited {
 	color: hsla(199,22%,23%, 1);
+	text-decoration: none;
+}
+
+#blog-section h2 a:hover {
+	color: hsla(200, 50%, 40%, 1);
 }
 
 .white-wrapper hr {
