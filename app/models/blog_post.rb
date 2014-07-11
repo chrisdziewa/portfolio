@@ -1,4 +1,6 @@
 class BlogPost < ActiveRecord::Base
+	belongs_to :user
+
 	validates :title, presence: { message: "Must include a title" }, 
 						length: { minimum: 5 }
 
