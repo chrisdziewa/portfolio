@@ -547,6 +547,10 @@ footer p {
  		width: 70%;
  	}
 
+ 	aside p {
+ 		width: 70%;
+ 	}
+
 }
 
 
@@ -611,7 +615,6 @@ footer p {
  		max-width: 350px;
  		padding-left: 5%;
  	}
-
 }
 
 @media only screen and (min-width: 950px) {
@@ -642,6 +645,7 @@ footer p {
  	aside p {
  		text-align: left;
  		margin-left: 3%;
+ 		width: 90%;
  	}
 }
 
